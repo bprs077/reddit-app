@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   console.log(`Fetching top commenters for subreddit: ${subreddit}`);
 
   try {
-    const { stdout, stderr } = await execAsync(`python reddit_analyzer.py ${subreddit}`);
+    const { stdout, stderr } = await execAsync(`python3 reddit_analyzer.py ${subreddit}`);
 
     if (stderr) {
       console.error(`stderr: ${stderr}`);
